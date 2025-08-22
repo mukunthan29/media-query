@@ -20,7 +20,6 @@ li{
     padding: 5px;
     margin-right: 20px;
     cursor: pointer;
-    /* justify-content: end; */
     margin-top: 15px;
     transition: 0.9s;
     font-size: 20px;
@@ -51,6 +50,9 @@ nav{
     #img1{
         display: none;
     }
+    #img3{
+        width: 400px;
+    }
 }
 .div2{
     display: flex;
@@ -79,14 +81,147 @@ nav{
     margin-bottom: 20px;
 }
 .div4{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(3,1fr);
 }
-#img3{
-    width: 33.3%;
+@media screen and (max-width:1024px) {
+    .div4{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:600px) {
+    .div4{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.div4 img{
+    width: 100%;
     height: auto;
     cursor: pointer;
+    transition: filter 0.8s ease;
+    filter: saturate(50%);
 }
-#img3:hover{
-    background: rgba(244, 98, 58, 0.9)
+.div4 img:hover{
+    filter: saturate(200%);
+    /* filter: brightness(15%); */
+}
+.div5{
+    display: flex;
+    justify-content: center;
+}
+.div5 button{
+    padding: 15px 40px ;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 15px;
+    font-size: 20px;
+    z-index: -1;
+}
+.div5 button::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+}
+.div5 button::before{
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000, #ff7300, #fffb00, #48ff00,
+        #00ffd5, #002bff, #ff00c8, #ff0000
+    );
+    position: absolute;
+    top: -7px;
+    left: -8px;
+    background-size: 625%;
+    z-index: -1;
+    width: calc(103% + 10px);
+    height: calc(105% + 10px);
+    filter: blur(8px);
+    animation: glowing 25s linear infinite;
+    transition: opacity .5s ease-in-out;
+    border-radius: 15px;
+    opacity: 1;
+}
+@keyframes glowing{
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+.div5 button:hover::before{
+    opacity: 1;
+}
+.div5 button:active::after{
+    background: transparent;
+}
+.div5 button:active{
+    color: #000;
+    font-weight: bold;
+}
+.div6{
+    display: flex;
+    justify-content: center;
+}
+.div6 h1{
+    font-size: 35px;
+}
+.div7{
+    display: flex;
+    justify-content: center;
+}
+.div7 p{
+    color: gray;
+    font-size: 25px;
+    text-align: center;
+}
+.div8{
+    display: grid;
+    justify-content: center;
+}
+.div8 input{
+    width: 800px;
+    height: 50px;
+    border-color: lightgray;
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Times New Roman';
+    margin-bottom: 20px;
+}
+#input1{
+    width: 800px;
+    height: 150px;
+    border-color: grey;
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Times New Roman';
+    margin-bottom: 40px;
+}
+.div9{
+    display: grid;
+    justify-content: center;
+}
+.div9 button{
+    border: none;
+    font-size: 30px;
+    background-color: rgb(252, 106, 106);
+    padding: 10px;
+    color: white;
+    border-radius: 30px;
+    width: 800px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.div9 p{
+    text-align: center;
+    font-size: 25px;
 }
