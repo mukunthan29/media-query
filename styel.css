@@ -7,7 +7,8 @@ header{
     height: 60px;
     position: fixed;
     width: 100%;
-    border-bottom: 1px solid black;
+    box-shadow: 0 4px 8px rgba(70, 66, 66, 0.3); 
+    z-index: 999;
 }
 ul{
     display: flex;
@@ -23,6 +24,18 @@ li{
     margin-top: 15px;
     transition: 0.9s;
     font-size: 20px;
+    color: white;
+}
+li:hover{
+    color: orangered;
+}
+nav{
+    margin-right: 100px;
+}
+#img1{
+    cursor: pointer;
+    font-size: 25px;
+    z-index: -1;
 }
 .div1{
     padding-top: 80px;
@@ -33,18 +46,6 @@ li{
     li{
         display: none;
     }
-}
-li:hover{
-    color: orangered;
-}
-nav{
-    margin-right: 100px;
-}
-#img1{
-    margin-left:-89px;
-    margin-top: 17px;
-    cursor: pointer;
-    font-size: 25px;
 }
 @media screen and (min-width:769px) {
     #img1{
@@ -58,11 +59,12 @@ nav{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-self:center;
 
 }
 @media screen and (max-width:425px) {
     .div2{
-        display: block;
+        margin-left: 25px;
     }
 }
 #h1{
@@ -77,8 +79,10 @@ nav{
     height: 200px;
 }
 .div3{
-    margin-left: 50px;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
+
 }
 .div4{
     display: grid;
@@ -93,6 +97,7 @@ nav{
 @media screen and (max-width:600px) {
     .div4{
         grid-template-columns: repeat(1,1fr);
+        margin-left:20px;
     }
 }
 .div4 img{
@@ -104,7 +109,6 @@ nav{
 }
 .div4 img:hover{
     filter: saturate(200%);
-    /* filter: brightness(15%); */
 }
 .div5{
     display: flex;
@@ -120,7 +124,6 @@ nav{
     z-index: 0;
     border-radius: 15px;
     font-size: 20px;
-    z-index: -1;
 }
 .div5 button::after{
     content: "";
@@ -175,6 +178,12 @@ nav{
 .div6 h1{
     font-size: 35px;
 }
+@media screen and (max-width:900px) { 
+    .div6 h1{
+        font-size: 20px;
+    }
+    
+}
 .div7{
     display: flex;
     justify-content: center;
@@ -189,7 +198,7 @@ nav{
     justify-content: center;
 }
 .div8 input{
-    width: 800px;
+    max-width: 800px;
     height: 50px;
     border-color: lightgray;
     font-size: 20px;
@@ -198,13 +207,23 @@ nav{
     margin-bottom: 20px;
 }
 #input1{
-    width: 800px;
-    height: 150px;
+    max-width: 800px;
+    height: 100px;
     border-color: grey;
     font-size: 20px;
     padding: 5px;
     font-family: 'Times New Roman';
     margin-bottom: 40px;
+    resize: none;
+
+}
+@media screen and (max-width:900px) {
+    .div8 input{
+        width: 100%;
+    }
+    #input1{
+        width: 100%;
+    }
 }
 .div9{
     display: grid;
@@ -212,16 +231,39 @@ nav{
 }
 .div9 button{
     border: none;
-    font-size: 30px;
+    font-size: 20px;
     background-color: rgb(252, 106, 106);
     padding: 10px;
     color: white;
     border-radius: 30px;
-    width: 800px;
+    max-width: 800px;
     cursor: pointer;
     margin-bottom: 20px;
 }
 .div9 p{
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    height: 70px;
+    align-items: center;
+    width: 100%;
+}
+@media screen and (max-width:561px) {
+    footer{
+        width: 105%;
+    }
+    footer h4{
+        font-size: 15px;
+    }
+}
+footer h4{
+    color: white;
+    font-size: 15px;
+}
+body{
+    background-color: lightgray;
 }
