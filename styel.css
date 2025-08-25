@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color: lightgray;
+}
 header{
     background-color: gray;
     height: 60px;
@@ -26,6 +29,33 @@ li{
     font-size: 20px;
     color: white;
 }
+a{
+    text-decoration: none;
+}
+@media screen and (max-width:768px) {
+    header{
+    background-color: lightgrey;
+    height: 210px;
+    position: sticky;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); 
+    z-index: 999;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        margin-left: 75px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    li{
+        color: black;
+        border-bottom: 2px solid gray;
+        width: 100%;
+        text-align: center;
+    }
+}
 li:hover{
     color: orangered;
 }
@@ -37,15 +67,14 @@ nav{
     font-size: 25px;
     z-index: -1;
 }
+.div0{
+    display: flex;
+    justify-content: center;
+}
 .div1{
     padding-top: 80px;
     text-align: center;
     font-family: 'Times New Roman';
-}
-@media screen and (max-width:768px) {
-    li{
-        display: none;
-    }
 }
 @media screen and (min-width:769px) {
     #img1{
@@ -60,7 +89,6 @@ nav{
     justify-content: center;
     flex-wrap: wrap;
     align-self:center;
-
 }
 @media screen and (max-width:425px) {
     .div2{
@@ -263,7 +291,4 @@ footer{
 footer h4{
     color: white;
     font-size: 15px;
-}
-body{
-    background-color: lightgray;
 }

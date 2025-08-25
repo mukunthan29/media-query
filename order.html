@@ -7,41 +7,42 @@
     <link rel="stylesheet" href="styel1.css">
     <script src="https://kit.fontawesome.com/c0000ffc88.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Services</li>
-                <li>Portfolio</li>
-                <li>contact</li>
-                <span id="img1"><i class="fa-solid fa-bars"></i></span>
+                <a href="#home"><li>Home</li></a>
+                <a href="#return"><li>Return</li></a>
+                <a href="#explore"><li>Explore Food</li></a>
+                <a href="index.html"><li>Index</li></a>
             </ul>
         </nav>
     </header>
 
     <div class="food-name">
-        <select>
-        <option>Food Menus</option>
-        <option>Sandburg Shakes</option>
-        <option>Koolchas</option>
-        <option>Subway</option>
-        <option>Madurai Meenakshi Bhawan</option>
-        <option>Royal Spice</option>
-        <option>Mucchad's Samosezz</option>
-        <option>Chinese Corner</option>
-        <option>South Store</option>
-        <option>Burger Bc</option>
-        <option>Fork With Sticks</option>
-        <option>Burger Homes</option>
-        <option>Rasoi</option>
-        </select>
+        <label for="food-menu">Choose Food Menu:</label>
+        <select id="food-menu" name="food-menu">
+        <option value="">Food Menus</option>
+        <option value="sandburg">Sandburg Shakes</option>
+        <option value="koolchas">Koolchas</option>
+        <option value="subway">Subway</option>
+        <option value="madurai">Madurai Meenakshi Bhawan</option>
+        <option value="royal">Royal Spice</option>
+        <option value="samosezz">Mucchad's Samosezz</option>
+        <option value="chinese">Chinese Corner</option>
+        <option value="south">South Store</option>
+        <option value="burgerbc">Burger Bc</option>
+        <option value="fork">Fork With Sticks</option>
+        <option value="burgerhomes">Burger Homes</option>
+        <option value="rasoi">Rasoi</option>
+</select>
+
     </div>
 
-    <div class="food-item">
+    <div class="food-item" id="home">
         <div class="div1">
             <div class="foods">
             <img src="image/food9.jpg" alt="food9">
@@ -86,23 +87,50 @@
     </div>
     <br>
 
-    <div class="order-food">
+    <div class="order-food" id="refund">
         <div>
             <img src="image/Delivery food img.png" alt="Delivery food img" id="Delivery-img">
         </div>
-        <div >
+        <div class="order-food1">
             <h1 id="h1">Take a look at the benefits we <br> offer for you</h1>
-            <p id="para3">Good service means a triendly, welcoming serivce, A restaurant <br> owner shold not merely strive to avoid bad service</p>
+            <p id="para3">Good service means a triendly, welcoming  serivce,  A restaurant owner shold not merely strive to avoid bad service</p>
+        <div class="delivery-div">
         <div class="fast-delivery"> 
             <img src="image/fast delivery icon.png" alt="fast-delivery-icon" id="delivery-icon">
             <h4 id="h2">Free Home Delivary</h4>
             <p id="para4">for all orders over $50</p>
         </div>
-        <div class="fast-delivery"> 
+        <div class="fast-delivery2"> 
             <img src="image/refund icon.jpg" alt="fast-delivery-icon" id="delivery-icon">
             <h4 id="h2">Return & Refund</h4>
             <p id="para4">Money Back Guatantec</p>
         </div>
+        </div>
+        <div class="delivery-div">
+        <div class="fast-delivery">
+            <img src="image/secure payment img.avif" alt="secure payment img" id="delivery-icon">
+            <h4 id="h2">Secure Payment</h4>
+            <p id="para4">100% Secure Payment</p>
+        </div>
+        <div class="fast-delivery2">
+            <img src="image/activity icon.png" alt="activity img" id="delivery-icon">
+            <h4 id="h2">Quality Support</h4>
+            <p id="para4">Alway Online 24/7</p>
+        </div>
+        </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="home-delivery" id="explore">
+        <div>
+        <h1 id="h3">Get Your Cuisine <br> Delivered Right To</h1>
+        <h1 id="h4">Your Door</h1>
+        <p id="para5">Good service means a triendly, welcoming  serivce,  A restaurant owner shold not merely strive to avoid bad service</p>
+        <button>Explore Food</button>
+        </div>
+        <div class="delivery-image">
+            <img src="image/food-delivery.png" alt="food delivery img">
         </div>
     </div>
 </body>
